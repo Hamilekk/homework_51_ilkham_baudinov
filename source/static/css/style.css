@@ -1,0 +1,39 @@
+.container {
+    font-family: Arial sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 300px;
+
+}
+
+.name {
+    height: 25px;
+    width: 300px;
+}
+
+.submit {
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.img {
+    width: 20%;
+}
+
+.view {
+    display: flex;
+}
+
+.info_cat {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.make {
+    width: 300px;
+    height: 45px;
+    margin: 20px 0 5px;
+}

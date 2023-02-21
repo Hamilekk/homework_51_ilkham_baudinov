@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <title>Title</title>
+</head>
+<body>
+<div class="view">
+    {% if happiness == 10 and fullness == 10 and activity == 10 %}
+        <img class="img" src="https://cdn-st2.rtr-vesti.ru/vh/pictures/hd/257/723/7.jpg" alt="cat">
+    {% elif happiness == 50 and fullness == 50 and activity == 50 %}
+        <img class="img" src="https://s13.stc.yc.kpcdn.net/share/i/instagram/B44solahwlo/wr-1280.webp" alt="cat">
+    {% else %}
+        <img  class="img" src="https://gamebomb.ru/files/galleries/001/2/2f/397141.jpg" alt="#">
+    {% endif %}
+
+    <div class="info_cat">
+        <p>Кот - {{ name }} </p>
+        <p>Возраст - {{ age }}  </p>
+        <p>Уровень счастья - {{ happiness }}</p>
+        <p>Уровень сытости - {{ fullness }}</p>
+        <p>Уровень энергичности - {{ activity }}</p>
+
+    </div>
+</div>
+
+<form method="post">
+    {% csrf_token %}
+    <label>
+        <select class="form-select" aria-label="Default select example" name="action">
+            <option value="play">Поиграть с котом</option>
+            <option value="eat">Покормить кота</option>
+            <option value="sleep">Уложить спать кота</option>
+        </select>
+    </label> <br>
+    <input type="submit" value="Send" class="btn btn-success">
+</form>
+</div>
+</body>
+</html>
+
+</body>
+</html>
